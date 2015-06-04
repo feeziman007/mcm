@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Backbone Contact Manager</title>
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="bs-header">
+        <div class="container">
+            <h1>Contact Manager</h1>
+            <p>Simple Backbone.js example application</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 main-container">
+        </div>
+    </div>
+
+        <ul>
+            <li><a href="/link.html"></a></li>
+            <li><a href="/link.html"></a></li>
+            <li><a href="/link.html"></a></li>
+            <li><a href="/link.html"></a></li>
+            <li><a href="/link.html"></a></li>
+        </ul>
+
+
+        <script type="text/template" id="tpl-contacts">
+        <h2 class="page-header text-center">List of contacts</h2>
+        <p class="text-center">
+            <a href="#contacts/new" class="btn btn-lg btn-outline">Add Contact</a>
+        </p>
+        <ul class="media-list row contacts-container"></ul>
+    </script>
+
+    <script type="text/template" id="tpl-contact">
+        <div class="thumbnail">
+            <img class="media-object" src="<%- avatar %>">
+        </div>
+        <div class="media-heading">
+            <h3>
+                <%- name %>
+                <small>
+                    <a href="#contacts/edit/<%- id %>"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="#contacts/delete/<%- id %>" class="delete-contract">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </small>
+            </h3>
+        </div>
+        <div class="media-body">
+            <dl>
+                <dt>Phone Number:</dt>
+                <dd><%- address %></dd>
+                <dt>Email:</dt>
+                <dd><%- email %></dd>
+            </dl>
+        </div>
+        <hr>
+    </script>
+
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/underscore/underscore.js"></script>
+    <script src="vendor/backbone/backbone.js"></script>
+    <script src="vendor/marionette/lib/backbone.marionette.js"></script>clear
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/models/models-contact.js"></script>
+    <script src="app/js/collections/collections-contacts.js"></script>
+    <script src="app/js/views/views-contact.js"></script>
+    <script src="app/js/views/views-contacts.js"></script>
+    <script src="app/js/controller.js"></script>
+    <script src="app/js/routes.js"></script>
+
+    <script>
+        $(function() {
+            //CManager.KickOff()
+        })
+    </script>
+
+
+</body>
+</html>
